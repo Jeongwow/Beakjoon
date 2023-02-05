@@ -3,8 +3,22 @@
 """
 
 N=int(input())
-
-for i in range(N):
+cnt=0
+for i in range(1,N+1):
     stri=str(i)
-    for j in i:
-        
+    term=1000000
+    if i<100:
+        cnt+=1
+        continue
+    else:
+        old_term=999
+        no_flag=0
+        for j in range(1,len(stri)):
+            new_term=int(stri[j])-int(stri[j-1])
+            if j!=1 and old_term!=new_term:
+                no_flag=1
+                break
+            old_term=new_term
+        if no_flag==0:
+            cnt+=1
+print(cnt)
