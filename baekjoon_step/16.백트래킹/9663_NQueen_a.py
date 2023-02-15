@@ -69,7 +69,4 @@ for i in sorted(idx_list,reverse=True):
     res.pop(i)     
 
 
-# for ab in raN:
-#     print(res[0][ab])
-# print()
 print(len(res))
